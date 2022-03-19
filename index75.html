@@ -21,22 +21,23 @@
   </p>
   <script type="text/javascript">
     myEventUtil.addHandler(window, 'load', function () {
-      document.getElementById('name-value').innerHTML = myCookieUtil.get('name');
+      document.getElementById('name-value').innerHTML = myCookieUtil.get('firstname');
       document.getElementById('age-value').innerHTML = myCookieUtil.get('age');
-      document.getElementById('age-value').innerHTML = myCookieUtil.get('grade');
+      document.getElementById('grade-value').innerHTML = myCookieUtil.get('grade');
       myEventUtil.addHandler(document.getElementById('delete-btn'),'click', function () {
         //удаление cookie-файлов
-        myCookieUtil.unset('name');
+        myCookieUtil.unset('firstname');
         myCookieUtil.unset('age');
         myCookieUtil.unset('grade');
 
       })
       //задание cookie-файла с ФИО студента, возрастом и оценкой
-      myCookieUtil.set('name','Иванов Иван Иванович');
-      myCookieUtil.set('age', '30');
+      myCookieUtil.set('firstname','Дробышевский Андрей Николаевич');
+      myCookieUtil.set('age', '32');
       myCookieUtil.set('grade', '8');
     });
   </script>
 
 </body>
 </html>
+
